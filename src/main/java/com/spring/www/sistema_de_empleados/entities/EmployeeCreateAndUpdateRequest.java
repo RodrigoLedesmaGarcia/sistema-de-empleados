@@ -6,7 +6,6 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
-import java.util.stream.Stream;
 
 public class EmployeeCreateAndUpdateRequest {
 
@@ -31,7 +30,7 @@ public class EmployeeCreateAndUpdateRequest {
     @NotBlank(message = "el campo de genero no puede ir vacio")
     private String gender;
 
-    @Column(name = "gender", nullable = false)
+    @Column(name = "hire_date", nullable = false)
     @NotNull(message = "el campo de fecha de contratacion no puede ir vacio" )
     private LocalDate hireDate;
 
@@ -40,7 +39,6 @@ public class EmployeeCreateAndUpdateRequest {
     private String deptNo;
 
     @Column(name = "from_date", nullable = false)
-
     @NotNull(message = "el campo de fecha desde no puede estar vacio")
     @DateTimeFormat( iso = DateTimeFormat.ISO.DATE) // iso 8603 yyyy-MM-dd
     private LocalDate fromDate;
