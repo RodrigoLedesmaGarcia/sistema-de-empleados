@@ -2,12 +2,14 @@ package com.spring.www.sistema_de_empleados;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 public class SistemaDeEmpleadosApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SistemaDeEmpleadosApplication.class, args);
+		System.out.println(new BCryptPasswordEncoder().encode("12345"));
 	}
 
 }

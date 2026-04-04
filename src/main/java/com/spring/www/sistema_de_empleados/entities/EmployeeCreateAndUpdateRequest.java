@@ -25,7 +25,6 @@ public class EmployeeCreateAndUpdateRequest {
     @NotBlank(message = "el campo de apellido no puede ir vacio")
     private String lastName;
 
-
     @Column(name = "gender", nullable = false)
     @NotBlank(message = "el campo de genero no puede ir vacio")
     private String gender;
@@ -46,6 +45,12 @@ public class EmployeeCreateAndUpdateRequest {
     @Column(name = "to_date", nullable = false)
     @DateTimeFormat( iso = DateTimeFormat.ISO.DATE) // iso 8603 yyyy-MM-dd
     private LocalDate toDate;
+
+    /*
+    LocalDate  2020-01-12
+    LocalDateTime 2020-01-12-08-45-58
+    LocalTime  14:12:23
+     */
 
     public EmployeeCreateAndUpdateRequest() {
     }
