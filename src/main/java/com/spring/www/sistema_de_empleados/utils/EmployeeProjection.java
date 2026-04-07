@@ -20,4 +20,6 @@ public interface EmployeeProjection {
     public abstract String      getDeptNo();
 
     public abstract LocalDate   getFromDate();
+
+    public abstract LocalDate   getToDate();
 }
